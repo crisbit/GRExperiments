@@ -91,7 +91,8 @@ class LayerCircle: UIView {
         circleLayer.path = circle.CGPath
         circleLayer.fillColor = UIColor.clearColor().CGColor
         circleLayer.strokeColor = circleColor.CGColor
-        circleLayer.lineWidth = circleLineWidth;
+        circleLayer.lineWidth = circleLineWidth
+        circleLayer.lineCap = "round"
         circleLayer.strokeEnd = 0.0
     }
     
