@@ -22,6 +22,9 @@ class LayerCircle: UIView {
     @IBInspectable var bgCircleLineWidth: CGFloat = 1.0
     @IBInspectable var circleColor: UIColor = UIColor.greenColor()
     @IBInspectable var circleLineWidth: CGFloat = 5.0
+    /**
+        Must be between 0 and 1
+     */
     @IBInspectable var progress: CGFloat = 0.5 { didSet { animateCircle() } }
     
     // pre-allocate layers (or subviews)
@@ -70,7 +73,7 @@ class LayerCircle: UIView {
             arcCenter: center,
             radius: radius,
             startAngle: -degreesToRadians(90),
-            endAngle: degreesToRadians(360),
+            endAngle: degreesToRadians(270),
             clockwise: true
         )
         
@@ -84,7 +87,7 @@ class LayerCircle: UIView {
             arcCenter: center,
             radius: radius,
             startAngle: -degreesToRadians(90),
-            endAngle: degreesToRadians(360),
+            endAngle: degreesToRadians(270),
             clockwise: true
         )
         
